@@ -103,7 +103,7 @@ def login():
     )
 
     access_token.add_grant(voice_grant)
-    jwt = access_token.to_jwt().decode('utf-8')
+    jwt = access_token.to_jwt()
 
     return jsonify({
         'message': 'Login successful',
